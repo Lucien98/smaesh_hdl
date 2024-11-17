@@ -12,7 +12,7 @@
 // on this source, You must where practicable maintain the Source Location
 // visible on the external case of any product you make using this source.
 
-(* fv_prop = "PINI", fv_strat = "flatten", fv_order=d *)
+
 module MSKaes_32bits_key_datapath
 #
 (
@@ -44,9 +44,9 @@ input rcon_rst;
 input rcon_update;
 input [128*d-1:0] sh_key;
 output [32*d-1:0] sh_4bytes_rot_to_SB;
-(* verime = "key_col_from_SB" *)
+
 input [32*d-1:0] sh_4bytes_from_SB;
-(* verime = "key_col_to_AK" *)
+
 output [32*d-1:0] sh_4bytes_to_AK;
 
 ///// RCON addition post Sbox
@@ -88,7 +88,7 @@ end
 endgenerate
 
 // Byte matrix representation of the holded round key
-(* verime = "key_byte" *)
+
 wire [8*d-1:0] sh_m_key[15:0];
 wire [8*d-1:0] to_sh_m_key[15:0];
 

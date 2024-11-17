@@ -49,16 +49,16 @@ input rst;
 // SVRS input (both key and plaintext must be provided simultnaneously)
 input in_valid;
 output in_ready;
-(* verime = "shares_plaintext" *)
+
 input [128*d-1:0] in_shares_plaintext;
-(* verime = "shares_key" *)
+
 input [128*d-1:0] in_shares_key;
 // SVRS PRNG seed
 input in_seed_valid;
 output in_seed_ready;
 input [79:0] in_seed;
 // SVRS ciphertext output
-(* verime = "shares_ciphertext" *)
+
 output [128*d-1:0] out_shares_ciphertext;
 output out_valid;
 input out_ready;

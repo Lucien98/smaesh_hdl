@@ -8,6 +8,9 @@
 // OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
 // Please see the CERN-OHL-P v2 for applicable conditions.
 `timescale 1ns/1ps
+`define TV_IN "TV_ECBKeySbox128_in.rsp"
+`define TV_OUT "TV_ECBKeySbox128_out.rsp"
+
 module tb_aes_enc128_32bits_hpc2
 #
 (

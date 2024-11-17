@@ -14,7 +14,7 @@
 
 // Full 32-bit arbitrary-order masked implementation of the AES (no inverse).
 // This is the complete AES that can be verified with fullVerif.
-(* fv_prop = "PINI", fv_strat = "composite", fv_order=d *)
+
 module MSKaes_32bits_core
 #
 (
@@ -55,38 +55,38 @@ module MSKaes_32bits_core
 `include "MSKand_HPC2.vh"
 
 // IOs Ports
-(* fv_type="control" *)
+
 input rst;
-(* fv_type="clock" *)
+
 input clk;
-(* fv_type="control" *)
+
 output busy;
-(* fv_type="control" *)
+
 input valid_in;
-(* fv_type="control" *)
+
 output in_ready;
-(* fv_type="control" *)
+
 output cipher_valid;
-(* fv_type="control" *)
+
 input out_ready;
 
-(* fv_type="sharing", fv_latency=0, fv_count=128 *)
+
 input [128*d-1:0] sh_plaintext;
-(* fv_type="sharing", fv_latency=0, fv_count=128 *)
+
 input [128*d-1:0] sh_key;
-(* fv_type="sharing", fv_latency=106, fv_count=128 *)
+
 output [128*d-1:0] sh_ciphertext;
 
-(* fv_type="random", fv_count=0, fv_rnd_count_0=4*9*and_pini_nrnd *)
+
 input [4*9*and_pini_nrnd-1:0] rnd_bus0;
-(* fv_type="random", fv_count=0, fv_rnd_count_0=4*3*and_pini_nrnd *)
+
 input [4*3*and_pini_nrnd-1:0] rnd_bus2;
-(* fv_type="random", fv_count=0, fv_rnd_count_0=4*4*and_pini_nrnd *)
+
 input [4*4*and_pini_nrnd-1:0] rnd_bus3;
-(* fv_type="random", fv_count=0, fv_rnd_count_0=4*18*and_pini_nrnd *)
+
 input [4*18*and_pini_nrnd-1:0] rnd_bus4;
 
-(* fv_type="control" *)
+
 output in_ready_rnd;
 
 // Control signal to enable to tap values coming from the outside of the core.
@@ -117,10 +117,10 @@ wire state_init;
 wire state_en_MC;
 wire state_en_loop;
 
-(* verime = "b32_fromK" *)
+
 wire [32*d-1:0] state_sh_4bytes_from_key;
 wire [32*d-1:0] sh_4bytes_from_SB;
-(* verime = "b32_fromAK" *)
+
 wire [32*d-1:0] state_sh_4bytes_to_SB;
 
 wire [128*d-1:0] sh_ciphertext_out;
@@ -204,7 +204,7 @@ mux_key_en(
 
 // Sboxes  
 wire [8*d-1:0] bytes_to_SB [3:0];
-(* verime = "B_fromSB" *)
+
 wire [8*d-1:0] bytes_from_SB [3:0];
 
 wire sbox_valid_in;

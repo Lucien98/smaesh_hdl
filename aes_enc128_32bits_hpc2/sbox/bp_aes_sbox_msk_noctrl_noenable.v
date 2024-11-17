@@ -14,7 +14,7 @@
 
 // Fully pipeline PINI AES Sbox (no inverse) in 6 clock cycles.
 // This file has been partially generated using  hpc_veriloger.py script (see Makefile for parameters).
-(* fv_prop = "PINI", fv_strat = "composite", fv_order=d *)
+
 module bp_aes_sbox_msk_noctrl_noenable
 #
 (
@@ -50,49 +50,49 @@ module bp_aes_sbox_msk_noctrl_noenable
 `include "MSKand_HPC2.vh"
 
 // Inputs ports
-(* fv_type="clock" *)
+
 input clk;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i0;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i1;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i2;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i3;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i4;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i5;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i6;
-(* fv_type="sharing", fv_latency=0, fv_count=1 *)
+
 input [d-1:0] i7;
-(* fv_type="random", fv_count=1, fv_rnd_count_0=9*and_pini_nrnd, fv_rnd_lat_0=0  *)
+
 input [9*and_pini_nrnd-1:0] rnd_bus0;
-(* fv_type="random", fv_count=1, fv_rnd_count_0=3*and_pini_nrnd, fv_rnd_lat_0=2  *)
+
 input [3*and_pini_nrnd-1:0] rnd_bus2;
-(* fv_type="random", fv_count=1, fv_rnd_count_0=4*and_pini_nrnd, fv_rnd_lat_0=3  *)
+
 input [4*and_pini_nrnd-1:0] rnd_bus3;
-(* fv_type="random", fv_count=1, fv_rnd_count_0=18*and_pini_nrnd, fv_rnd_lat_0=4  *)
+
 input [18*and_pini_nrnd-1:0] rnd_bus4;
 
 // Outputs ports
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o0;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o1;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o2;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o3;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o4;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o5;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o6;
-(* fv_type="sharing", fv_latency=6, fv_count=1 *)
+
 output [d-1:0] o7;
 
 

@@ -9,16 +9,16 @@
 // Please see the CERN-OHL-P v2 for applicable conditions.
 
 // Masked AND HPC2 gadget.
-(* fv_prop = "PINI", fv_strat = "assumed", fv_order=d *)
+
 module MSKand_HPC2 #(parameter d=2) (ina, inb, rnd, clk, out);
 
 `include "MSKand_HPC2.vh"
 
-(* fv_type = "sharing", fv_latency = 1 *) input  [d-1:0] ina;
-(* fv_type = "sharing", fv_latency = 0 *) input  [d-1:0] inb;
-(* fv_type = "random", fv_count = 1, fv_rnd_lat_0 = 0, fv_rnd_count_0 = and_pini_nrnd *) input [and_pini_nrnd-1:0] rnd;
-(* fv_type = "clock" *) input clk;
-(* fv_type = "random", fv_type = "sharing", fv_latency = 2 *) output [d-1:0] out;
+ input  [d-1:0] ina;
+ input  [d-1:0] inb;
+ input [and_pini_nrnd-1:0] rnd;
+ input clk;
+ output [d-1:0] out;
                                       
 genvar i,j;
 

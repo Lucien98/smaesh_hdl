@@ -14,7 +14,7 @@
 
 // Takes masked x in GF_256 and returns masked 0x02*x and 0x03*x.
 // The implementation is sharewise and purely combinational.
-(* fv_prop = "affine", fv_strat = "isolate", fv_order=d *)
+
 module MSKprodMC
 #
 (
@@ -22,11 +22,11 @@ module MSKprodMC
 )
 (
 
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     input [8*d-1:0] sh_in,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     output [8*d-1:0] sh_inx2,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     output [8*d-1:0] sh_inx3
 );
 

@@ -14,7 +14,7 @@
 
 // Masked implementation of MixColumms.
 // The implementation is sharewise and purely combinational.
-(* fv_prop = "affine", fv_strat = "composite", fv_order=d *)
+
 module MSKaesMC
 #
 (
@@ -22,22 +22,22 @@ module MSKaesMC
 )
 (
     // Input shares (masked GF_256 field elements)
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     input [8*d-1:0] a0,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     input [8*d-1:0] a1,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     input [8*d-1:0] a2,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     input [8*d-1:0] a3,
     // Output shares (masked GF_256 field elements)
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     output [8*d-1:0] b0,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     output [8*d-1:0] b1,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     output [8*d-1:0] b2,
-    (* fv_type="sharing" , fv_latency=0, fv_count=8 *)
+    
     output [8*d-1:0] b3
 );
 

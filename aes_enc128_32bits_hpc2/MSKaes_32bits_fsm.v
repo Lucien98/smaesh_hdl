@@ -12,7 +12,7 @@
 // on this source, You must where practicable maintain the Source Location
 // visible on the external case of any product you make using this source.
 
-(* fv_prop = "PINI", fv_strat = "flatten" *)
+
 module MSKaes_32bits_fsm
 (
     clk,

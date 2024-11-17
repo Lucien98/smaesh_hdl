@@ -9,7 +9,7 @@
 // Please see the CERN-OHL-P v2 for applicable conditions.
 
 // Trivial gate, we use this module to selectively disable systhesis optimizations.
-(* keep_hierarchy = "yes", DONT_TOUCH = "yes" *)
+
 module bin_REG
 #
 (

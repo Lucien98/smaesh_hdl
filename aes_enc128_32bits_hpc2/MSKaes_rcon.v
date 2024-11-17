@@ -13,7 +13,7 @@
 // visible on the external case of any product you make using this source.
 
 // Outputs the AES round constant. The masking is non-random: (x, 0, ..., 0).
-(* fv_strat = "flatten" *)
+
 module MSKaes_rcon
 #
 (

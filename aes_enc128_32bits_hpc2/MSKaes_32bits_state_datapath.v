@@ -12,7 +12,7 @@
 // on this source, You must where practicable maintain the Source Location
 // visible on the external case of any product you make using this source.
 
-(* fv_prop = "PINI", fv_strat = "flatten", fv_order=d *)
+
 module MSKaes_32bits_state_datapath
 #
 (
@@ -59,7 +59,7 @@ endgenerate
 
 // Mixcolumns combinatorial logic bloc dealing with the 32 shared bits 
 // coming from the Sbox
-(* verime = "b32_fromMC" *)
+
 wire [32*d-1:0] sh_4bytes_from_MC;
 // Mixcolumn unit
 MSKaesMC #(.d(d))

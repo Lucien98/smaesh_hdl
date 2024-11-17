@@ -11,7 +11,7 @@
 // Masked register with enable signal.
 // Due to variable latency, this cannot be verified as an isolated block by
 // fullVerif, hence we flatten it.
-(* fv_strat = "flatten" *)
+
 module MSKregEn #(parameter d=1, parameter count=1) (clk, en, in, out);
 
 input clk;

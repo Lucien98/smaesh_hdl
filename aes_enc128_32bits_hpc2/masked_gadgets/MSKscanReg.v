@@ -11,7 +11,7 @@
 // Masked register with enable signal and input mux.
 // Due to variable latency, this cannot be verified as an isolated block by
 // fullVerif, hence we flatten it.
-(* fv_strat = "flatten" *)
+
 module MSKscanReg #(parameter d=1, parameter count=1) (clk, en, scan_en, in_d, in_scan, out_q);
 
 input clk;
